@@ -1,0 +1,315 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY BACKGROUND */
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background:
+        radial-gradient(ellipse at top left, #25205a 0%, transparent 45%),
+        radial-gradient(ellipse at bottom right, #123b52 0%, transparent 45%),
+        linear-gradient(135deg, #080b18, #101329, #080b18);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+/* MAIN MUSIC CONTAINER */
+
+.music-container {
+    width: 100%;
+    max-width: 850px;
+    background: rgba(22, 27, 51, 0.92);
+    padding: 35px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 35px;
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.5),
+        0 0 25px rgba(0, 212, 255, 0.08);
+}
+
+/* ALBUM SECTION */
+
+.album-section {
+    text-align: center;
+}
+
+/* ALBUM COVER */
+
+.album-cover {
+    width: 190px;
+    height: 190px;
+    margin: 0 auto 25px;
+    background: linear-gradient(
+        135deg,
+        #21145e,
+        #7728a8,
+        #00bcd4
+    );
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+    overflow: hidden;
+}
+
+/* VINYL DISC */
+
+.vinyl {
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    background: repeating-radial-gradient(
+        circle,
+        #11131b 0px,
+        #252936 3px,
+        #08090d 5px,
+        #181825 7px
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    animation: spin 5s linear infinite;
+}
+
+.vinyl-center {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, #00e5ff, #8a2be2);
+    border: 5px solid #151525;
+    border-radius: 50%;
+}
+
+/* VINYL ANIMATION */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ALBUM DETAILS */
+
+.album-section h2 {
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.artist {
+    color: #a5afc9;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* PROGRESS BAR */
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #343951;
+    border-radius: 20px;
+    margin-top: 28px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #00d4ff, #a855f7);
+    border-radius: 20px;
+    transition: width 0.3s linear;
+}
+
+/* TIME DISPLAY */
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    color: #9da8c3;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* PLAYBACK CONTROLS */
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    margin-top: 25px;
+}
+
+.controls button {
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.controls button:hover {
+    transform: scale(1.2);
+    color: #00d4ff;
+}
+
+/* PLAY BUTTON */
+
+.controls .play {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00d4ff, #7c4dff);
+    color: #080b18;
+    font-size: 21px;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+.controls .play:hover {
+    color: #080b18;
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.7);
+}
+
+/* PLAYLIST SECTION */
+
+.playlist-section h2 {
+    font-size: 23px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.playlist-section h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    margin-top: 10px;
+    background: linear-gradient(90deg, #00d4ff, #a855f7);
+    border-radius: 10px;
+}
+
+/* TRACK ROWS */
+
+.track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 19px 16px;
+    margin-bottom: 13px;
+    background: linear-gradient(135deg, #252b47, #1c2239);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease,
+                background 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.track:hover {
+    transform: translateX(6px);
+    background: linear-gradient(135deg, #343c60, #252d4b);
+    border-color: rgba(0, 212, 255, 0.4);
+}
+
+.track-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 15px;
+}
+
+.number {
+    color: #00d4ff;
+    font-weight: bold;
+}
+
+.duration {
+    color: #a5afc9;
+    font-size: 13px;
+}
+
+.track.active {
+    background: linear-gradient(135deg, #263b59, #30234e);
+    border-left: 4px solid #00d4ff;
+    border-color: rgba(0, 212, 255, 0.4);
+}
+
+.track.active .track-info span:last-child {
+    color: #00d4ff;
+    font-weight: bold;
+}
+
+/* DESKTOP RESPONSIVE DESIGN */
+
+@media (min-width: 768px) {
+
+    .music-container {
+        grid-template-columns: 200px 1fr;
+        align-items: center;
+        gap: 35px;
+        padding: 40px;
+    }
+
+    .album-cover {
+        width: 180px;
+        height: 180px;
+    }
+
+    .vinyl {
+        width: 140px;
+        height: 140px;
+    }
+
+    .album-section,
+    .playlist-section {
+        width: 100%;
+    }
+}
+
+/* SMALL MOBILE SCREENS */
+
+@media (max-width: 400px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .music-container {
+        padding: 20px 15px;
+        gap: 28px;
+    }
+
+    .album-section h2 {
+        font-size: 21px;
+    }
+
+    .track {
+        padding: 16px 10px;
+    }
+
+    .track-info {
+        gap: 9px;
+        font-size: 14px;
+    }
+}

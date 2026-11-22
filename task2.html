@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Pricing Cards</title>
+    <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+
+<main class="container">
+    <h1>Choose Your Plan</h1>
+    <p class="subtitle">Select the perfect plan for your needs.</p>
+
+    <div class="billing">
+        <span>Monthly</span>
+        <label class="switch">
+            <input type="checkbox" id="billingToggle">
+            <span class="slider"></span>
+        </label>
+        <span>Annual</span>
+    </div>
+
+    <section class="pricing-container">
+
+        <div class="card">
+            <h2>Starter</h2>
+            <p class="description">For beginners</p>
+            <h3 class="price" data-monthly="0" data-annual="0">₹0</h3>
+            <p class="period">Free forever</p>
+            <ul>
+                <li>✓ Basic Features</li>
+                <li>✓ 5 Projects</li>
+                <li>✓ Community Support</li>
+                <li>✓ Limited Storage</li>
+            </ul>
+            <button class="select-btn">Select Plan</button>
+        </div>
+
+        <div class="card popular">
+            <span class="badge">POPULAR</span>
+            <h2>Pro Plan</h2>
+            <p class="description">For professionals</p>
+            <h3 class="price" data-monthly="799" data-annual="7990">₹799</h3>
+            <p class="period">per month</p>
+            <ul>
+                <li>✓ Unlimited Projects</li>
+                <li>✓ Advanced Features</li>
+                <li>✓ Priority Support</li>
+                <li>✓ 100 GB Storage</li>
+            </ul>
+            <button class="select-btn">Select Plan</button>
+        </div>
+
+        <div class="card">
+            <h2>Team</h2>
+            <p class="description">For businesses</p>
+            <h3 class="price" data-monthly="1999" data-annual="19990">₹1,999</h3>
+            <p class="period">per month</p>
+            <ul>
+                <li>✓ All Pro Features</li>
+                <li>✓ Team Collaboration</li>
+                <li>✓ Dedicated Support</li>
+                <li>✓ 500 GB Storage</li>
+            </ul>
+            <button class="select-btn">Select Plan</button>
+        </div>
+
+    </section>
+
+    <p id="message"></p>
+</main>
+
+<script src="task2.js"></script>
+</body>
+</html>
